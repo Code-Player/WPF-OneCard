@@ -1,0 +1,27 @@
+﻿<Window x:Class="OncCard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OncCard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF2B9E00">
+        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border x:Name="RemainCardBase" Width="70" Height="100" BorderThickness="2" CornerRadius="10" BorderBrush="Black" Background="LightGray" Margin="5" MouseLeftButtonDown="CardDraw">
+                <TextBlock x:Name="RemainCardDisplay" Text="100" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" />
+            </Border>
+            <Border Margin="5" x:Name="LastCardBase">
+                
+            </Border>
+        </WrapPanel>
+        
+        <WrapPanel x:Name="Play1_DeckList" VerticalAlignment="Top" HorizontalAlignment="Center">
+            
+        </WrapPanel>
+
+        <WrapPanel x:Name="Play2_DeckList" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            
+        </WrapPanel>
+    </Grid>
+</Window>
