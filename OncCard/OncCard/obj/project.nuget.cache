@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tk6+E5J5SHnCeLhlPUPA+Ht8WKW/evdhqa4ruUAeOmnWLxvzgichcOIP6DOBcKEKrbOWDuJFGwJaRI2T5IR8cQ==",
+  "dgSpecHash": "rTXR4Xcvmc9MdQlALCmi8whiJa+3bjqRQ1pgql4LJqsmoGJ7kvaKNtEbM8LiWAK5v1T+phzvrwzmUflogoDx8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\1\\Desktop\\OncCard\\OncCard\\OncCard.csproj",
+  "projectFilePath": "C:\\Users\\1\\Desktop\\WPF-OneCard\\OncCard\\OncCard\\OncCard.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

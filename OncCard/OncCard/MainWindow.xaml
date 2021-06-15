@@ -5,23 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OncCard"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1100" ResizeMode="NoResize">
+    <Window.Resources>
+        <Storyboard x:Key="WIN_Event">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="WIN_Display" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <EasingThicknessKeyFrame KeyTime="00:00:00.5000000" Value="0,0,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseInOut" Oscillations="1" Springiness="1"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="00:00:00.9000000" Value="0,0,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="00:00:01.3000000" Value="0,700,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseIn" Oscillations="1" Springiness="1"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Background_Display" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Background_Display" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="LOSE_Event">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="LOSE_Display" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <EasingThicknessKeyFrame KeyTime="00:00:00.4000000" Value="0,0,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseInOut" Oscillations="1" Springiness="1"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="00:00:00.9000000" Value="0,0,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="00:00:01.3000000" Value="0,700,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseIn" Oscillations="1" Springiness="1"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Background_Display" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Background_Display" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
     <Grid Background="#FF2B9E00">
         <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Border x:Name="RemainCardBase" Width="70" Height="100" BorderThickness="2" CornerRadius="10" BorderBrush="Black" Background="LightGray" Margin="5" MouseLeftButtonDown="CardDraw">
                 <TextBlock x:Name="RemainCardDisplay" Text="100" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" />
             </Border>
-            <Border Margin="5" x:Name="LastCardBase">
-                
-            </Border>
-        </WrapPanel>
-        
-        <WrapPanel x:Name="Play1_DeckList" VerticalAlignment="Top" HorizontalAlignment="Center">
-            
+            <Border Margin="5" x:Name="LastCardBase" />
         </WrapPanel>
 
-        <WrapPanel x:Name="Play2_DeckList" VerticalAlignment="Bottom" HorizontalAlignment="Center">
-            
-        </WrapPanel>
+        <WrapPanel x:Name="Play1_DeckList" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        <WrapPanel x:Name="Play2_DeckList" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+
+        <TextBlock x:Name="Alarm" VerticalAlignment="Center" HorizontalAlignment="Right" />
+
+        <Rectangle Name="Background_Display" Fill="#333333" Opacity="0" Visibility="Collapsed" />
+        <TextBlock Name="WIN_Display" Text="WIN" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="200" Foreground="#FF2300FF" Margin="0,700,0,0" />
+        <TextBlock Name="LOSE_Display" Text="LOSE" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="200" Foreground="Red" Margin="0,700,0,0" />
     </Grid>
 </Window>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1\\Desktop\\OncCard\\OncCard\\OncCard.csproj": {}
+    "C:\\Users\\1\\Desktop\\WPF-OneCard\\OncCard\\OncCard\\OncCard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1\\Desktop\\OncCard\\OncCard\\OncCard.csproj": {
+    "C:\\Users\\1\\Desktop\\WPF-OneCard\\OncCard\\OncCard\\OncCard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Desktop\\OncCard\\OncCard\\OncCard.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Desktop\\WPF-OneCard\\OncCard\\OncCard\\OncCard.csproj",
         "projectName": "OncCard",
-        "projectPath": "C:\\Users\\1\\Desktop\\OncCard\\OncCard\\OncCard.csproj",
+        "projectPath": "C:\\Users\\1\\Desktop\\WPF-OneCard\\OncCard\\OncCard\\OncCard.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Desktop\\OncCard\\OncCard\\obj\\",
+        "outputPath": "C:\\Users\\1\\Desktop\\WPF-OneCard\\OncCard\\OncCard\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
