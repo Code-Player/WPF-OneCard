@@ -28,6 +28,7 @@ namespace OncCard
         string lastCard;
         bool turn;
         List<string> shuffledCards = new();
+        int hand;
 
         private Random rand = new();
 
@@ -145,17 +146,30 @@ namespace OncCard
                             {
                                 // Select Card Info
                                 LastCardBase.Child = CardBase($"{textOfSuit.Text}/{textOfNumber.Text}", true);
+                                border.Visibility = Visibility.Collapsed;
                             }
                         //Debug.WriteLine($"{textOfSuit.Text}{textOfNumber.Text}");
                     }
-                }
 
-                if(sender is Border _border)
-                {
-                    if(_border.Parent is WrapPanel wrap)
+                    // hand card count
+                    hand = 0;
+                    if (border.Parent is WrapPanel wrap)
                     {
+                        foreach (Border element in wrap.Children)
+                        {
+                            if (element.Visibility == Visibility.Visible)
+                                hand++;
+                        }
                     }
                 }
+
+                // GAME WIN
+                if(hand == 0)
+                {
+                    Debug.WriteLine("win");
+                }
+
+                Debug.WriteLine(hand);
             }
 
             card.Child = cardBody;
@@ -172,7 +186,7 @@ namespace OncCard
                 return;
 
             Play2_DeckList.Children.Add(
-                    CardBase(shuffledCards[indexCount++], true)
+                CardBase(shuffledCards[indexCount++], true)
             );
 
             RemainCardDisplay.Text = $"{index.Count - indexCount}";
